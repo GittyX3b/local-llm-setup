@@ -1,0 +1,59 @@
+{
+  "name": "local-llm-setup",
+  "version": "1.0.0",
+  "description": "basic setup for local ai model",
+  "homepage": "https://github.com/GittyX3b/local-llm-setup#readme",
+  "license": "ISC",
+  "author": "dandy nagel",
+  "type": "module",
+  "main": "app.ts",
+  "bugs": {
+    "url": "https://github.com/GittyX3b/local-llm-setup/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GittyX3b/local-llm-setup.git"
+  },
+  "scripts": {
+    "dev": "node --watch --conditions development --experimental-transform-types --disable-warning=ExperimentalWarning --env-file=.env.development.local src/app.ts",
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node --env-file=.env.production.local dist/app.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
+    "@google/genai": "^1.37.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.5",
+    "openai": "^5.23.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
+  },
+  "imports": {
+    "#controllers": {
+      "development": "./src/controllers/index.ts",
+      "default": "./dist/controllers/index.js"
+    },
+    "#middlewares": {
+      "development": "./src/middlewares/index.ts",
+      "default": "./dist/middlewares/index.js"
+    },
+    "#routes": {
+      "development": "./src/routes/index.ts",
+      "default": "./dist/routes/index.js"
+    },
+    "#schemas": {
+      "development": "./src/schemas/index.ts",
+      "default": "./dist/schemas/index.js"
+    },
+    "#utils": {
+      "development": "./src/utils/index.ts",
+      "default": "./dist/utils/index.js"
+    }
+  }
+}

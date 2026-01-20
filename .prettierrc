@@ -1,0 +1,36 @@
+{
+  "printWidth": 100,
+  "tabWidth": 4,
+  "semi": true,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "endOfLine": "lf",
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "importOrder": [
+    "^[a-zA-Z]",
+
+    "^@schemas/(?!.*\\.(css|json|png|jpg|jpeg|gif|webp|mp3|webm)$)(.*)$",
+    "^@utils/(?!.*\\.(css|json|png|jpg|jpeg|gif|webp|mp3|webm)$)(.*)$",
+    "^@middlewares/(?!.*\\.(css|json|png|jpg|jpeg|gif|webp|mp3|webm)$)(.*)$",
+    "^@controllers/(?!.*\\.(css|json|png|jpg|jpeg|gif|webp|mp3|webm)$)(.*)$",
+    "^@routes/(?!.*\\.(css|json|png|jpg|jpeg|gif|webp|mp3|webm)$)(.*)$",
+    "^(?!.*\\.(css|json|png|jpg|jpeg|gif|webp|mp3|webm)$)@",
+
+    ".*\\.json$",
+
+    ".*\\.css$",
+
+    ".*\\.(png|jpg|jpeg|gif|webp|mp3|webm)$",
+
+    "^\\./",
+    "^\\.\\./"
+  ],
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ]
+}
