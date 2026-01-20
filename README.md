@@ -52,7 +52,7 @@ basic node/express api for prompting to local ai model
 # Prompting 
 
 
-   - send a request to `POST http://127.0.0.1:804/ai/ollama` or `POST http://127.0.0.1:804/ai/lms` using the following json in body
+   - send a request to `POST http://127.0.0.1:8084/ai/ollama` or `POST http://127.0.0.1:8084/ai/lms` using the following json in body
 
 
       `{ "prompt":"Youre question here?", "stream":true }`
