@@ -2,7 +2,7 @@
 basic node/express api for prompting to local ai model
 
 
-![screencast_preview.gif](https://raw.githubusercontent.com/GittyX3b/local-llm-setup/refs/heads/main/screecast_preview.gif)
+![screencast_preview.gif](https://raw.githubusercontent.com/GittyX3b/local-llm-setup/refs/heads/main/screencast_preview.gif)
 
 
 (My setup was for llama3.2 on M4 MAC)
